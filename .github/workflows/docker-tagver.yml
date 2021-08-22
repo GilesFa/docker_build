@@ -1,5 +1,5 @@
 ---
-name: CI to DOcker Hub
+name: CI to DOcker Hub self tag version
 
 on:
   push:
