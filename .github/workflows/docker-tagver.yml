@@ -59,3 +59,4 @@ jobs:
       run: |
         docker run -d --rm  --name python_flask -p 5000:5000  gilesfa/python:test
         docker ps
+        echo this is test version
