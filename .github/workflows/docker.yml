@@ -49,12 +49,3 @@ jobs:
       run: |
         docker run -d --rm  --name python_flask -p 5000:5000  gilesfa/python:latest
         docker ps
-        
-    - name: exec http://127.0.0.1:5000
-      run: curl localhost:5000
-
-    # - name: docker build python
-    #   run: docker build ./python  -t gilesfa/python:latest
-
-    # - name: push python image to docker hub
-    #   run: docker push gilesfa/python:latest
