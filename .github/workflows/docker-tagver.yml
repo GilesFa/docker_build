@@ -48,7 +48,7 @@ jobs:
         context: ./python
         file: ./python/Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/python:latest
+        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/python:test
         cache-from: type=local,src=/tmp/.buildx-cache
         cache-to: type=local,dest=/tmp/.buildx-cache
         
@@ -57,5 +57,5 @@ jobs:
 
     - name: run python docker image
       run: |
-        docker run -d --rm  --name python_flask -p 5000:5000  gilesfa/python:latest
+        docker run -d --rm  --name python_flask -p 5000:5000  gilesfa/python:test
         docker ps
